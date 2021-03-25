@@ -1,0 +1,81 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: f052ca89162704b0eb808b72fd2803c32e6a664652f3897eb572b9ddf3b0d786
+
+name:           hweather
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/hweather#readme>
+homepage:       https://github.com/githubuser/hweather#readme
+bug-reports:    https://github.com/githubuser/hweather/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2021 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/hweather
+
+library
+  exposed-modules:
+      Lib
+      Server.App
+      Server.Model
+      Weather.Api
+      Weather.App
+  other-modules:
+      Paths_hweather
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , mtl
+    , servant
+    , servant-flatten
+    , servant-server
+    , warp
+  default-language: Haskell2010
+
+executable hweather-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_hweather
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , hweather
+    , mtl
+    , servant
+    , servant-flatten
+    , servant-server
+    , warp
+  default-language: Haskell2010
+
+test-suite hweather-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_hweather
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , hweather
+    , mtl
+    , servant
+    , servant-flatten
+    , servant-server
+    , warp
+  default-language: Haskell2010
