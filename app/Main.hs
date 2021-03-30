@@ -2,10 +2,8 @@
 
 module Main where
 
-import Server.App (run)
-import System.Environment
-
-{-# LANGUAGE TypeApplications #-}
+import           Server.App         (run)
+import           System.Environment (getArgs)
 
 main :: IO ()
 main = do

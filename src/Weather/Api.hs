@@ -1,12 +1,12 @@
-{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE DataKinds     #-}
 {-# LANGUAGE TypeOperators #-}
 
 module Weather.Api where
 
-import Servant
-import Servant.API.Flatten (Flat)
-import Server.Model
-import Weather.App (getWeatherHandler, setWeatherHandler)
+import           Servant
+import           Servant.API.Flatten (Flat)
+import           Server.Model
+import           Weather.App         (getWeatherHandler, setWeatherHandler)
 
 type WeatherApi =
   Flat

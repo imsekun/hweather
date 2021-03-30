@@ -1,12 +1,12 @@
 {-# LANGUAGE ConstraintKinds #-}
-{-# LANGUAGE DataKinds #-}
+{-# LANGUAGE DataKinds       #-}
 
 module Server.App(run, mkApp) where
 
 import qualified Network.Wai.Handler.Warp as Warp
-import Servant
-import Server.Model
-import Weather.Api
+import           Servant
+import           Server.Model
+import           Weather.Api
 
 run :: Int -> IO ()
 run port = do
